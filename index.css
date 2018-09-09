@@ -1,0 +1,15 @@
+.card{
+    font-size: 30px;
+    font-weight: bold;
+    background: white;
+    box-shadow: -5px 5px blue;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    /* color: blue; */
+}
+
+body{
+    background: black;
+    font-family: 'Fira Mono', monospace;
+}
