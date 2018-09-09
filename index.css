@@ -1,12 +1,21 @@
 .card{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
     background: white;
     box-shadow: -5px 5px blue;
     width: 50%;
     margin: auto;
+    padding: 10px;
+}
+
+#title-card{
     text-align: center;
-    /* color: blue; */
+    font-size: 50px;
+}
+
+#footer{
+    text-align: center;
+    bottom: 10px;
 }
 
 body{
