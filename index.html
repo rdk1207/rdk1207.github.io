@@ -2,26 +2,57 @@
 <html>
     <head>
         <title>Rohan Kingan</title>
-        <link href="https://fonts.googleapis.com/css?family=Fira+Mono" rel="stylesheet">
         <link rel="stylesheet" href="index.css"/>
     </head>
+
     <body>
-        <div class="card" id="title-card">
-            ROHAN KINGAN
+        <div id="debug" class="card">
+            <style id="debug-stylesheet">
+                #debug { display: none; }
+            </style>
+            <div class="header">
+                <h3 class="middle">Debug</h3>
+            </div>
+            <div class="main">
+                <input type="checkbox" value="borders" onchange="debug(this)"/> borders
+            </div>
+            <script src="debug.js"></script>
         </div>
-        <br>
+
         <div class="card">
-            Projects:
-            <br/>
-            <a href="https://github.com/rdk1207/OTsite">Theta Tau Chapter Site</a>
-            <br/>
-            <a href="https://github.com/rdk1207/ArduinoFFT">Ardiono FFT</a>
-            <br/>
-            <a href="https://rdk1207.github.io/ProtoBufJS-Demo/demo.html">Google Protocol Buffer Demo</a>
+            <div class="main">
+                <h2 style="text-align: center;">Rohan Kingan</h2>
+            </div>
         </div>
-        <br/>
-        <div class="card" id="footer">
-            <a href="https://github.com/rdk1207/rdk1207.github.io">site repo</a>
+
+        <div class="card">
+            <div class="header">
+                <h3 class="middle">Projects</h3>
+            </div>
+
+            <div class="main">
+                <ul style="font-weight: bold;">
+                    <li>
+                        <a href="https://rdk1207.github.io/ProtoBufJS-Demo" target="blank">Google Protocol Buffer Demo (2019)</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rdk1207/ArduinoFFT" target="blank">Ardiono FFT (2017)</a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/rdk1207/OTsite" target="blank" >Theta Tau Chapter Site (2017)</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="main">
+                <p style="text-align: center; font-size: 8pt;">
+                    <a href="https://github.com/rdk1207" target="blank">My GitHub</a> | 
+                    <a href="https://github.com/rdk1207/rdk1207.github.io" target="blank">Site Repo</a> | 
+                    Updated 4/3/2019
+                </p>
+            </div>
         </div>
     </body>
 </html>

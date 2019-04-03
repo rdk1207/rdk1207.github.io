@@ -1,24 +1,46 @@
-.card{
-    font-size: 20px;
-    font-weight: bold;
-    background: white;
-    box-shadow: -5px 5px blue;
-    width: 50%;
-    margin: auto;
-    padding: 10px;
-}
-
-#title-card{
-    text-align: center;
-    font-size: 50px;
-}
-
-#footer{
-    text-align: center;
-    bottom: 10px;
-}
-
 body{
-    background: black;
-    font-family: 'Fira Mono', monospace;
+    background-color: lightgrey;
+    font-family: arial;
+    font-size: 12pt;
+
+    display: flex;
+    flex-direction: column;
+}
+
+div{
+    margin: 0;
+}
+
+.card{
+    background-color: white;
+    outline: solid 1px darkgrey;
+    width: 8.5in;
+    overflow: auto;
+
+    margin: 0.125in auto 0.125in auto;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+/* Card Header */
+.card .header{
+    margin: 0.125in 0 0 0;
+}
+
+.card .header *{
+    margin: 0;
+}
+
+.card .header .middle{
+    text-align: center;
+}
+
+/* Card Main */
+
+.card .main{
+    margin: 0.125in;
+}
+.card .main *{
+    margin: 0;
 }
