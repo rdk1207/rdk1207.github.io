@@ -27,6 +27,10 @@ ul{
     padding-left: 1rem;
 }
 
+ul > li{
+    padding-top: 0.5em;
+}
+
 #nav{
     display: block;
     width: 100%;
