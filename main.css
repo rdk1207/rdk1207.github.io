@@ -1,0 +1,36 @@
+body{
+    background-color: #ffe;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.main{
+    max-width: 38rem;
+    padding: 1.5rem;
+    margin: auto;
+}
+
+a{
+    text-decoration: none;
+    color: #009;
+}
+
+a:hover{
+    text-decoration: underline;
+}
+
+::selection{
+    background-color: #ff7;
+}
+
+ul{
+    list-style-type: none;
+    padding-left: 1rem;
+}
+
+#nav{
+    display: block;
+    width: 100%;
+    text-align: center;
+    border-top: solid 1px #000;
+    margin-top: 2rem;
+}
