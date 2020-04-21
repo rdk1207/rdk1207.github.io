@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Networking Fundamentals</title>
+  </head>
+  <body>
+    <div class="part">
+      <style>
+        .part {
+          width: 70ch;
+          margin: 1ch auto auto auto;
+          background-color: #eee;
+          font-family: sans-serif;
+          padding: 1ch;
+        }
+        div {
+          border-radius: 5px;
+        }
+      </style>
+      <h1>Part 1 - IP Addresses</h1>
+
+      <p>Let's say you have two computers. You want to send a message from computer A to computer B via a network connection. How do we do that?</p>
+
+      <p>Let's simplify things. If it were two people sending mail to one another (let's say Bob sending a message to Mary), Bob would put his message in an envelope with Mary's address on it. Normally this might look like:</p>
+
+      <code>12 Pavillion St, New Brunswick, NJ</code>
+
+      <p>Mary's location boils down to four pieces of information:
+        <br/>
+        <ol>
+          <li>The house number</li>
+          <li>The street</li>
+          <li>the Town</li>
+          <li>the State</li>
+        </ol>
+      O.K. including the name and the zip code perhaps 6 pieces of information. If you count the country then 7, but you see what I mean.</p>
+
+      <p>In the world of computers (in IPv4, we'll get to IPv6 later) the address of a computer is four bytes.</p>
+
+      <p>Each byte is 8 bits (in binary: 0b00000000 to 0x11111111, in decimal 0 to 255). Each byte is between 0 and 255 (inclusive) and separated by a ".". An address might look like 192.168.3.99 or 0.0.0.5 or 74.24.99.10.</p>
+
+      <p>Go ahead and try entering an IP address. Click the validate button to see if the IP is a valid one.</p>
+
+      <div style="background-color: #ddd; padding: 1ch;">
+        <b>Try It Out:</b>
+        <p>
+          IP: 
+          <input type="text" id="IP"/>
+          <input type="button" value="validate" onclick="validateIP(event)"/>
+          <input type="button" value="Give me an example!" onclick="createExample(event)"/>
+        </p>
+        <p>
+        Result: <br/>
+          <textarea type="text" id="result" style="width: 100%; padding: 0; margin: 0; resize: none; height: 5em;" disabled></textarea>
+        </p>
+      </div>
+      <script>
+        let ipElement = document.querySelector('#IP');
+        let resultElement = document.querySelector('#result');
+        function validateIP(evt){
+          let str = IP.value.split('.');
+          let bytes = [];
+          let messages = [];
+          console.log(str);
+          let wrong = false;
+
+          if(str.length !== 4){
+            messages.push('Try again! Remember 4 numbers separated by periods. Only from 0 to 255');
+          }
+          else{
+            for(var i = 0; i < str.length; ++i){
+              bytes[i] = parseInt(str[i], 10);
+
+              console.log(bytes[i]);
+
+              if(isNaN(bytes[i])){
+                messages.push('Looks like ' + str[i] + ' isn\'t a number');
+                wrong = true;
+              }
+              else if(bytes[i] < 0 || bytes[i] > 255){
+                messages.push('Remember, a byte is 0 to 255. ' + bytes[i] + ' appears to be out of range');
+                wrong = true;
+              }
+            }
+            if(!wrong){
+              messages.push('Looks good!');
+            }
+          }
+          resultElement.textContent = messages.join('\n');
+        }
+        function createExample(evt){
+          ipElement.value = [
+            Math.floor(Math.random()*256),
+            Math.floor(Math.random()*256),
+            Math.floor(Math.random()*256),
+            Math.floor(Math.random()*256)
+          ].join('.');
+        }
+      </script>
+      <p>Great! Now we have a way to assign addresses to computers. Next we'll tackle IPv6</p>
+      <p><a href="#">Next Part - IPv6 Addresses</a></p>
+    </div>
+    <div class="part"><a href="http://kingan.me">Home</a></div>
+  </body>
+</html>
