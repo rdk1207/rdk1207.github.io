@@ -1,6 +1,7 @@
 body{
-    background-color: #ffe;
-    font-family: 'Courier New', Courier, monospace;
+    background-color: black;
+    font-family: Arial, monospace;
+    color: hsl(0, 0%, 80%);
 }
 
 .main{
@@ -11,15 +12,11 @@ body{
 
 a{
     text-decoration: none;
-    color: #009;
+    color: hsl(240, 100%, 85%);
 }
 
 a:hover{
     text-decoration: underline;
-}
-
-::selection{
-    background-color: #ff7;
 }
 
 ul{
@@ -35,7 +32,7 @@ ul > li{
     display: block;
     width: 100%;
     text-align: center;
-    border-top: solid 1px #000;
+    border-top: solid 1px hsl(0, 0%, 80%);
     margin-top: 2rem;
     padding-top: 1em;
 }
